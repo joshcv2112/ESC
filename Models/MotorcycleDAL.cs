@@ -9,8 +9,8 @@ namespace MotoInventory.Models
 {
     public class MotorcycleDAL
     {
-        //string connectionString = "Data Source=DESKTOP-SOORD4P;Initial Catalog=\"Evergreen Safety\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        string connectionString = "Data Source=LAPTOP-3R0QQVMN;Initial Catalog=\"Evergreen Safety\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string connectionString = "Data Source=DESKTOP-SOORD4P;Initial Catalog=\"Evergreen Safety\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //string connectionString = "Data Source=LAPTOP-3R0QQVMN;Initial Catalog=\"Evergreen Safety\";Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         // Get All
         public IEnumerable<MotorcycleInfo> GetAllMotorcycle()
@@ -47,6 +47,11 @@ namespace MotoInventory.Models
             return motorcycleList;
         }
 
+        internal void UpdateMotorcycle(MotorcycleInfo objEmp)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddMotorcycle(MotorcycleInfo motorcycle)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -74,7 +79,41 @@ namespace MotoInventory.Models
             }
         }
 
-        // See video here to implement other CRUD funcitons in the DAL
-        // https://www.youtube.com/watch?v=oz7Xn-Cjba0&t=456s
+        internal void DeleteMotorcycle(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public MotorcycleInfo GetMotorcycleByVIN(string vinNumber)
+        {
+            MotorcycleInfo emp = new MotorcycleInfo();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("SP_GetMotorcycleById", con);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@VINNumber", vinNumber);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    emp.VINNumber= dr["VINNumber"].ToString();
+                    emp.ESCNumber = dr["ESCNumber"].ToString();
+                    emp.Owner = dr["Owner"].ToString();
+                    emp.Year = Convert.ToInt32(dr["Year"].ToString());
+                    emp.Make = dr["Make"].ToString();
+                    emp.Model = dr["Model"].ToString();
+                    emp.TurnInDate = dr["TurnInDate"].ToString();
+                    emp.DateAcquired = dr["DateAcquired"].ToString();
+                    emp.EngineCC = dr["EngineCC"].ToString();
+                    emp.SiteID = dr["SiteID"].ToString();
+                    emp.SiteLocation = dr["SiteLocation"].ToString();
+                    emp.PurchasePrice = dr["PurchasePrice"].ToString();
+                    emp.CurrentValue = dr["CurrentValue"].ToString();
+                }
+                con.Close();
+            }
+            return emp;
+        }
     }
 }

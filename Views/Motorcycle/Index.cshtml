@@ -4,8 +4,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*/Motorcycle/Index*@
-
 <h1>Motorcycle Inventory</h1>
 
 <p>
@@ -59,9 +57,9 @@
                 @Html.DisplayFor(modelItem => motorcycle.Owner)
             </td>
             <td>
-                <a asp-action="Details" asp-route-id="@motorcycle.VINNumber">Details</a>
-                <a asp-action="Edit" asp-route-id="@motorcycle.VINNumber">Edit</a>
-                <a asp-action="Delete" asp-route-id="@motorcycle.VINNumber">Delete</a>
+                <a asp-action="Edit" asp-route-vinNumber="@motorcycle.VINNumber">Edit</a> |
+                <a asp-action="Details" asp-route-vinNumber="@motorcycle.VINNumber">Details</a> |
+                <a asp-action="Delete" asp-route-vinNumber="@motorcycle.VINNumber">Delete</a>
             </td>
         </tr>
         }

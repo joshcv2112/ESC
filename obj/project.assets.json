@@ -451,23 +451,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joshc\\.nuget\\packages\\": {},
+    "C:\\Users\\Josh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\EvergreenSafetyCouncil\\EvergreenSafetyCouncil.csproj",
+      "projectUniqueName": "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj",
       "projectName": "EvergreenSafetyCouncil",
-      "projectPath": "C:\\code\\EvergreenSafetyCouncil\\EvergreenSafetyCouncil.csproj",
-      "packagesPath": "C:\\Users\\joshc\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\EvergreenSafetyCouncil\\obj\\",
+      "projectPath": "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj",
+      "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Josh\\Documents\\ESC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\joshc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Josh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -514,7 +514,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
