@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj": {}
+    "C:\\code\\ESC\\EvergreenSafetyCouncil.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj": {
+    "C:\\code\\ESC\\EvergreenSafetyCouncil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj",
+        "projectUniqueName": "C:\\code\\ESC\\EvergreenSafetyCouncil.csproj",
         "projectName": "EvergreenSafetyCouncil",
-        "projectPath": "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj",
+        "projectPath": "C:\\code\\ESC\\EvergreenSafetyCouncil.csproj",
         "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Josh\\Documents\\ESC\\obj\\",
+        "outputPath": "C:\\code\\ESC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

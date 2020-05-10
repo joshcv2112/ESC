@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EonCP4ixkICzWuG3NhOxJh0+rUIESigXayIBeYLSHo53GebZTQ1w+FwrLvSN/SuR0xXishRVfqAQK5Vnr7wdVA==",
+  "dgSpecHash": "NcbKKAseaOi4RyWa11uc6dSZaFHtC+wEtmrvaIIRhjsI+El+Fo4l9InFVzKxTWXz8AQOtpF4w7sa4O5ihVo+yw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Josh\\Documents\\ESC\\EvergreenSafetyCouncil.csproj",
+  "projectFilePath": "C:\\code\\ESC\\EvergreenSafetyCouncil.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Josh\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Josh\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
