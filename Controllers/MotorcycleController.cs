@@ -36,37 +36,35 @@ namespace MotoInventory.Controllers
             return View(objMotorcycle);
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    MotorcycleInfo emp = motorcycleDAL.GetMotorcycleByVIN(id);
-        //    if (emp == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(emp);
-        //}
+        public IActionResult Edit(string vinNumber)
+        {
+            if (vinNumber == null)
+            {
+                return NotFound();
+            }
+            MotorcycleInfo motorcycle = motorcycleDAL.GetMotorcycleByVIN(vinNumber);
+            if (motorcycle == null)
+            {
+                return NotFound();
+            }
+            return View(motorcycle);
+        }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Edit(int? id, [Bind] MotorcycleInfo objEmp)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    if (ModelState.IsValid)
-        //    {
-        //        motorcycleDAL.UpdateMotorcycle(objEmp);
-        //        return RedirectToAction("Index");
-        //    }
-        //    return View(motorcycleDAL);
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(string vinNumber, [Bind] MotorcycleInfo objMotorcycle)
+        {
+            if (vinNumber == null)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                motorcycleDAL.UpdateMotorcycle(objMotorcycle);
+                return RedirectToAction("Index");
+            }
+            return View(motorcycleDAL);
+        }
 
         [HttpGet]
         public IActionResult Details(string vinNumber)
@@ -83,26 +81,26 @@ namespace MotoInventory.Controllers
             return View(emp);
         }
 
-        //public IActionResult Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    MotorcycleInfo emp = motorcycleDAL.GetMotorcycleByVIN(id);
-        //    if (emp == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(emp);
-        //}
+        public IActionResult Delete(string vinNumber)
+        {
+            if (vinNumber == null)
+            {
+                return NotFound();
+            }
+            MotorcycleInfo motorcycle = motorcycleDAL.GetMotorcycleByVIN(vinNumber);
+            if (motorcycle == null)
+            {
+                return NotFound();
+            }
+            return View(motorcycle);
+        }
 
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult DeleteEmp(int? id)
-        //{
-        //    motorcycleDAL.DeleteMotorcycle(id);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteMotorcycle(string vinNumber)
+        {
+            motorcycleDAL.DeleteMotorcycle(vinNumber);
+            return RedirectToAction("Index");
+        }
     }
 }

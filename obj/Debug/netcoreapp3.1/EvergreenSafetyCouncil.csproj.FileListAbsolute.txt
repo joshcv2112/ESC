@@ -105,7 +105,6 @@ C:\code\ESC\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\code\ESC\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\code\ESC\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.csprojAssemblyReference.cache
-C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.csproj.CoreCompileInputs.cache
 C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.MvcApplicationPartsAssemblyInfo.cache
 C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.RazorAssemblyInfo.cache
 C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.RazorAssemblyInfo.cs
@@ -132,4 +131,5 @@ C:\code\ESC\obj\Debug\netcoreapp3.1\staticwebassets\EvergreenSafetyCouncil.Stati
 C:\code\ESC\obj\Debug\netcoreapp3.1\staticwebassets\EvergreenSafetyCouncil.StaticWebAssets.xml
 C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.dll
 C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.pdb
-C:\code\ESC\obj\Debug\netcoreapp3.1\EvergreenSafetyCouncil.genruntimeconfig.cache
+C:\code\ESC\obj\Debug\netcoreapp3.1\Razor\Views\Motorcycle\Delete.cshtml.g.cs
+C:\code\ESC\obj\Debug\netcoreapp3.1\Razor\Views\Motorcycle\Edit.cshtml.g.cs

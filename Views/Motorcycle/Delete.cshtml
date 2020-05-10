@@ -1,0 +1,29 @@
+﻿@model MotoInventory.Models.MotorcycleInfo
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.VINNumber): @Html.DisplayFor(model => model.VINNumber)</dt>
+        <dt>@Html.DisplayNameFor(model => model.ESCNumber): @Html.DisplayFor(model => model.ESCNumber)</dt>
+        <dt>@Html.DisplayNameFor(model => model.Owner): @Html.DisplayFor(model => model.Owner)</dt>
+        <dt>@Html.DisplayNameFor(model => model.Year): @Html.DisplayFor(model => model.Year)</dt>
+        <dt>@Html.DisplayNameFor(model => model.Make): @Html.DisplayFor(model => model.Make)</dt>
+        <dt>@Html.DisplayNameFor(model => model.Model): @Html.DisplayFor(model => model.Model)</dt>
+        <dt>@Html.DisplayNameFor(model => model.TurnInDate): @Html.DisplayFor(model => model.TurnInDate)</dt>
+        <dt>@Html.DisplayNameFor(model => model.DateAcquired): @Html.DisplayFor(model => model.DateAcquired)</dt>
+        <dt>@Html.DisplayNameFor(model => model.EngineCC): @Html.DisplayFor(model => model.EngineCC)</dt>
+        <dt>@Html.DisplayNameFor(model => model.SiteID): @Html.DisplayFor(model => model.SiteID)</dt>
+        <dt>@Html.DisplayNameFor(model => model.SiteLocation): @Html.DisplayFor(model => model.SiteLocation)</dt>
+        <dt>@Html.DisplayNameFor(model => model.PurchasePrice): @Html.DisplayFor(model => model.PurchasePrice)</dt>
+        <dt>@Html.DisplayNameFor(model => model.CurrentValue): @Html.DisplayFor(model => model.CurrentValue)</dt>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="VINNumber" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
