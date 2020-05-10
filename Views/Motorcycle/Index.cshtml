@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MotoInventory.Models.MotorcycleInfo>
+@{
+    ViewData["Title"] = "Motorcycle Inventory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*/Motorcycle/Index*@
+
+<h1>Motorcycle Inventory</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ESCNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VINNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Owner)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var motorcycle in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => motorcycle.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => motorcycle.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => motorcycle.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => motorcycle.ESCNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => motorcycle.VINNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => motorcycle.Owner)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@motorcycle.VINNumber">Details</a>
+                <a asp-action="Edit" asp-route-id="@motorcycle.VINNumber">Edit</a>
+                <a asp-action="Delete" asp-route-id="@motorcycle.VINNumber">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
