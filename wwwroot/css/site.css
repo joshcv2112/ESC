@@ -18,6 +18,8 @@ for details on configuring this project to bundle and minify static web assets. 
     background: #fbfafd;
 }
 
+
+
 .card-columns .card-img {
     height: 330px;
     vertical-align: bottom;
@@ -173,10 +175,14 @@ th {
     border-bottom: 1px solid #dddddd;
 }
 
-    .content-table tbody tr:nth-of-type(even) {
-        background-color: #f3f3f3;
-    }
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
 
-    .content-table tbody tr:last-of-type {
-        border-bottom: 2px solid #27844F;
-    }
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #27844F;
+}
+
+.button-link {
+    text-decoration: none;
+}

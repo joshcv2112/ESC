@@ -4,10 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Motorcycle Inventory</h1>
+<h1>Vehicle Inventory</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" style="text-decoration: none !important;">
+        <input type="submit" value="Add Motorcycle" class="btn btn-outline-success" />
+    </a>
 </p>
 
 <table class="table table-striped">
@@ -37,29 +39,35 @@
     <tbody>
         @foreach(var motorcycle in Model)
         {
-        <tr>
-            <td>
+        <tr class="myrow">
+            <td style="vertical-align:middle">
                 @Html.DisplayFor(modelItem => motorcycle.Make)
             </td>
-            <td>
+            <td style="vertical-align:middle">
                 @Html.DisplayFor(modelItem => motorcycle.Model)
             </td>
-            <td>
+            <td style="vertical-align:middle">
                 @Html.DisplayFor(modelItem => motorcycle.Year)
             </td>
-            <td>
+            <td style="vertical-align:middle">
                 @Html.DisplayFor(modelItem => motorcycle.ESCNumber)
             </td>
-            <td>
+            <td style="vertical-align:middle">
                 @Html.DisplayFor(modelItem => motorcycle.VINNumber)
             </td>
-            <td>
+            <td style="vertical-align:middle">
                 @Html.DisplayFor(modelItem => motorcycle.Owner)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-vinNumber="@motorcycle.VINNumber">Edit</a> |
-                <a asp-action="Details" asp-route-vinNumber="@motorcycle.VINNumber">Details</a> |
-                <a asp-action="Delete" asp-route-vinNumber="@motorcycle.VINNumber">Delete</a>
+            <td style="vertical-align:middle">
+                <a asp-action="Details" asp-route-vinNumber="@motorcycle.VINNumber" class="button-link" style="text-decoration: none !important;">
+                    <input type="submit" value="Details" class="btn btn-outline-success btn-sm" />
+                </a>
+                <a asp-action="Edit" asp-route-vinNumber="@motorcycle.VINNumber" class="button-link" style="text-decoration: none !important;">
+                    <input type="submit" value="Edit" class="btn btn-outline-primary btn-sm" />
+                </a>
+                <a asp-action="Delete" asp-route-vinNumber="@motorcycle.VINNumber" class="button-link" style="text-decoration: none !important;">
+                    <input type="submit" value="Delete" class="btn btn-outline-danger btn-sm" />
+                </a>
             </td>
         </tr>
         }
