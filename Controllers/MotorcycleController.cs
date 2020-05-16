@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MotoInventory.Models;
 
@@ -11,6 +12,7 @@ namespace MotoInventory.Controllers
     {
         MotorcycleDAL motorcycleDAL = new MotorcycleDAL();
 
+        [Authorize]
         public IActionResult Index()
         {
             List<MotorcycleInfo> motorcycleList = new List<MotorcycleInfo>();
